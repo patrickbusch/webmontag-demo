@@ -21,17 +21,55 @@ class MainNavigationController: UINavigationController {
     }
 }
 
-class CollectionViewController : UICollectionViewController {
+class CollectionViewController : UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
+    let data = Data.get
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.collectionView!.backgroundColor = UIColor.blueColor()
+        self.title = "Hellooo, it's me!"
+        self.collectionView!.backgroundColor = UIColor.blackColor()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let edge = UIScreen.mainScreen().bounds.size.width / CGFloat(2) - CGFloat(10)
+        return CGSizeMake(edge, edge)
+    }
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> WMCell {
+        
+        let cell: WMCell = collectionView.dequeueReusableCellWithReuseIdentifier("myCell", forIndexPath: indexPath) as! WMCell
+        
+        let row = indexPath.row
+        
+        cell.titleLabel.text = data[row].0
+        ImageLoader.load(data[row].1) { image in
+            cell.backgroundImage.image = image
+            cell.backgroundImage.alpha = 0.7
+        }
+        return cell
+    }
+}
+
+class WMCell : UICollectionViewCell {
+
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    override func prepareForReuse() {
+        
+        backgroundImage.image = nil
+        titleLabel.text = ""
     }
 }
