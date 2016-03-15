@@ -1,0 +1,15 @@
+- File -> New Project -> Webmontag
+- LaunchScreen.storyboard -> Black Background
+    -> Label -> Starting WebMontag
+    -> Set Constraints (Horizontal &  Vertical Centers)
+- ViewController : UIViewController
+ -> MainNavigationController: UINavigationController
+    !(File names not corresponding to class names) -> rename file to ViewControllers (for demo purposes)
+- Main.storyboard -> delete all -> add NavigationController
+ -> setClass to MainNavigationController
+ -> set IsInitialViewController
+ -> remove tableViewController
+ -> add CollectionViewController
+ -> add Relationship Segue (rootViewController)
+- ViewControllers.swift -> CollectionViewController : UICollectionViewController (and copy default funcs)
+
