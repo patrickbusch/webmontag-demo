@@ -53,12 +53,21 @@ class CollectionViewController : UICollectionViewController, UICollectionViewDel
         
         let row = indexPath.row
         
-        cell.titleLabel.text = data[row].0
+        cell.titleLabel.text = "@" + data[row].0
         ImageLoader.load(data[row].1) { image in
             cell.backgroundImage.image = image
             cell.backgroundImage.alpha = 0.7
         }
         return cell
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let row = indexPath.row
+        
+        let webViewController = WebViewController.create("https://twitter.com/" + data[row].0)
+        webViewController.title = data[row].0
+        (UIApplication.sharedApplication().windows[0].rootViewController as! MainNavigationController).pushViewController(webViewController, animated: true)
     }
 }
 
