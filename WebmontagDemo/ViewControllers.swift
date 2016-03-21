@@ -55,8 +55,9 @@ class CollectionViewController : UICollectionViewController, UICollectionViewDel
         
         cell.titleLabel.text = "@" + data[row].0
         ImageLoader.load(data[row].1) { image in
-            cell.backgroundImage.image = image
-            cell.backgroundImage.alpha = 0.7
+            let cell = collectionView.cellForItemAtIndexPath(indexPath) as? WMCell
+            cell?.backgroundImage.image = image
+            cell?.backgroundImage.alpha = 0.7
         }
         return cell
     }

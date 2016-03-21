@@ -22,6 +22,10 @@ class Data {
         ("crookoo","https://pbs.twimg.com/profile_images/3425075104/dc9e3c52758111284309d19016a45f3e_400x400.jpeg"),
         ("vitamin_J","https://pbs.twimg.com/profile_images/1597443718/Bildschirmfoto_2011-10-20_um_07.45.47_400x400.png"),
         ("pippo3","https://pbs.twimg.com/profile_images/637603940/christian_small_400x400.jpg"),
+        ("d_nielb","https://pbs.twimg.com/profile_images/484385859463290880/mxAYd0-r_400x400.jpeg"),
+        ("_itsKeek","https://pbs.twimg.com/profile_images/511207590936584192/V6KMagI4_400x400.jpeg"),
+        ("lxwrz","https://abs.twimg.com/sticky/default_profile_images/default_profile_5_400x400.png"),
+        ("dailyway","https://pbs.twimg.com/profile_images/635095858925686784/mWXKcxoW_400x400.jpg")
     ]
 }
 
