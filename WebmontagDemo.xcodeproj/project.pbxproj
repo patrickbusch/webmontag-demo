@@ -26,6 +26,7 @@
 		1D2221971C98A25500FE0512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D22219D1C98A27000FE0512 /* Script */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Script; sourceTree = "<group>"; };
 		1D2221A11C98AE4200FE0512 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		1D45CD631CF60B01006E3DD9 /* Webmontag.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Webmontag.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 				1D2221941C98A25500FE0512 /* LaunchScreen.storyboard */,
 				1D2221971C98A25500FE0512 /* Info.plist */,
 				1D2221A11C98AE4200FE0512 /* Util.swift */,
+				1D45CD631CF60B01006E3DD9 /* Webmontag.playground */,
 			);
 			path = WebmontagDemo;
 			sourceTree = "<group>";
@@ -292,6 +294,7 @@
 				1D22219C1C98A25500FE0512 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
